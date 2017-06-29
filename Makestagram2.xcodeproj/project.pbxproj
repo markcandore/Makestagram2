@@ -16,6 +16,9 @@
 		5F32AC3B1F056EBB001D7B8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F32AC391F056EBB001D7B8A /* GoogleService-Info.plist */; };
 		5F32AC401F056FDF001D7B8A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F32AC3F1F056FDF001D7B8A /* Login.storyboard */; };
 		5F32AC421F057029001D7B8A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32AC411F057029001D7B8A /* LoginViewController.swift */; };
+		5F32AC451F0587F4001D7B8A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32AC441F0587F4001D7B8A /* User.swift */; };
+		5F32AC471F05A70C001D7B8A /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32AC461F05A70C001D7B8A /* CreateUsernameViewController.swift */; };
+		5F32AC491F05B0D6001D7B8A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32AC481F05B0D6001D7B8A /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		5F32AC391F056EBB001D7B8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F32AC3F1F056FDF001D7B8A /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5F32AC411F057029001D7B8A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5F32AC441F0587F4001D7B8A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5F32AC461F05A70C001D7B8A /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		5F32AC481F05B0D6001D7B8A /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				5F32AC1C1F056BEC001D7B8A /* AppDelegate.swift */,
+				5F32AC4A1F05B0EA001D7B8A /* Services */,
+				5F32AC431F0587E3001D7B8A /* Models */,
 				5F32AC3E1F056F54001D7B8A /* View Controllers */,
 				5F32AC3D1F056F4B001D7B8A /* Storyboards */,
 				5F32AC3C1F056F37001D7B8A /* Supporting Files */,
@@ -117,8 +125,25 @@
 			children = (
 				5F32AC321F056EAA001D7B8A /* ViewController.swift */,
 				5F32AC411F057029001D7B8A /* LoginViewController.swift */,
+				5F32AC461F05A70C001D7B8A /* CreateUsernameViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5F32AC431F0587E3001D7B8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F32AC441F0587F4001D7B8A /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5F32AC4A1F05B0EA001D7B8A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5F32AC481F05B0D6001D7B8A /* UserService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F32AC451F0587F4001D7B8A /* User.swift in Sources */,
 				5F32AC421F057029001D7B8A /* LoginViewController.swift in Sources */,
+				5F32AC491F05B0D6001D7B8A /* UserService.swift in Sources */,
 				5F32AC331F056EAA001D7B8A /* ViewController.swift in Sources */,
+				5F32AC471F05A70C001D7B8A /* CreateUsernameViewController.swift in Sources */,
 				5F32AC1D1F056BEC001D7B8A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
