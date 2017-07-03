@@ -49,6 +49,7 @@ extension LoginViewController: FUIAuthDelegate {
         
         let userRef = Database.database().reference().child("users").child(user.uid)
         
+        
         userRef.observeSingleEvent(of: .value, with: {[unowned self] (snapshot) in
             if let user = User(snapshot: snapshot) {
                 User.setCurrent(user)
@@ -57,18 +58,37 @@ extension LoginViewController: FUIAuthDelegate {
                 
                 if let initialViewController = storyboard.instantiateInitialViewController(){
                     self.view.window?.rootViewController = initialViewController
-                    self.view.window?.makeKeyAndVisible()
+                    //self.view.window?.makeKeyAndVisible()
                 }
+            } else {
+                self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
+            }
+//
+            //made irrelevant with UserService
+//                if let user = User(snapshot: snapshot){
+//                    print("Welcome back, \(user.username)")
+//                } else{
+//                    self.performSegue(withIdentifier: "toCreateUsername", sender: self)
+//                }
+        })
+    
+        UserService.show(forUID: user.uid) { (user) in
+            if let user = user{
+                User.setCurrent(user)
+                
+                let initialViewController = UIStoryboard.initialViewController(for: .main)
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+                
+//                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+//                
+//                if let initialViewController = storyboard.instantiateInitialViewController(){
+//                    self.view.window?.rootViewController = initialViewController
+//                    self.view.window?.makeKeyAndVisible()
             } else {
                 self.performSegue(withIdentifier: "toCreateUsername", sender: self)
             }
             
-            //made irrelevant with UserService
-//            if let user = User(snapshot: snapshot){
-//                print("Welcome back, \(user.username)")
-//            } else{
-//                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
-//            }
-        })
+        }
     }
 }

@@ -30,14 +30,15 @@ class CreateUsernameViewController: UIViewController{
             }
             
             User.setCurrent(user)
-            let storyboard = UIStoryboard(name: "Main", bundle: .main)
             
+            let storyboard = UIStoryboard(name: "Main", bundle: .main)
             if let initialViewController = storyboard.instantiateInitialViewController(){
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()
             }
         }
      
+    }
         // made irrelevant with UserService
 //        let userAttrs = ["username": username]
 //        
@@ -53,5 +54,11 @@ class CreateUsernameViewController: UIViewController{
 //                let user = User(snapshot: snapshot)
 //            })
 //        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 }
