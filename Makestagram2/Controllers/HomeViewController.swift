@@ -12,6 +12,7 @@ import Kingfisher
 class HomeViewController: UIViewController{
     
     var posts = [Post]()
+    let refreshControl = UIRefreshControl()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,9 +27,17 @@ class HomeViewController: UIViewController{
         super.viewDidLoad()
         
         configureTableView()
+        reloadTimeline()
         
-        UserService.posts(for: User.current) { (posts) in
+    }
+    
+    func reloadTimeline() {
+        UserService.timeline{ (posts) in
             self.posts = posts
+            
+            if self.refreshControl.isRefreshing{
+                self.refreshControl.endRefreshing()
+            }
             self.tableView.reloadData()
         }
     }
@@ -42,6 +51,10 @@ class HomeViewController: UIViewController{
         tableView.tableFooterView = UIView()
         // remove separators from cells
         tableView.separatorStyle = .none
+        
+        // add pull to refresh
+        refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
 }
 // MARK: - UITableViewDelegate
