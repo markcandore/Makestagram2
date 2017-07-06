@@ -12,13 +12,18 @@ import FirebaseDatabase
 
 struct UserService {
     
-    static func timeline(completion: @escaping ([Post]) -> Void) {
+    static func timeline(pageSize: UInt, lastPostKey: String? = nil, completion: @escaping ([Post]) -> Void) {
         let currentUser = User.current
         
         //let timelineRef = Database.database().reference().child("timeline").child(currentUser.uid)
         let timelineRef = DatabaseReference.toLocation(.timeline(uid: currentUser.uid))
         
-        timelineRef.observeSingleEvent(of: .value, with: { (snapshot) in
+        var query = timelineRef.queryOrderedByKey().queryLimited(toLast: pageSize)
+        if let lastPostKey = lastPostKey {
+            query = query.queryEnding(atValue: lastPostKey)
+        }
+        
+        query.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
                 else { return completion([]) }
             
