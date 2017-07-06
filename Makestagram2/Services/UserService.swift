@@ -15,7 +15,9 @@ struct UserService {
     static func timeline(completion: @escaping ([Post]) -> Void) {
         let currentUser = User.current
         
-        let timelineRef = Database.database().reference().child("timeline").child(currentUser.uid)
+        //let timelineRef = Database.database().reference().child("timeline").child(currentUser.uid)
+        let timelineRef = DatabaseReference.toLocation(.timeline(uid: currentUser.uid))
+        
         timelineRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
                 else { return completion([]) }
@@ -47,8 +49,9 @@ struct UserService {
     }
     
     static func followers(for user: User, completion: @escaping ([String]) -> Void) {
-        let followersRef = Database.database().reference().child("followers").child(user.uid)
+        //let followersRef = Database.database().reference().child("followers").child(user.uid)
         
+        let followersRef = DatabaseReference.toLocation(.followers(uid: user.uid))
         followersRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let followersDict = snapshot.value as? [String : Bool] else{
                 return completion([])
@@ -60,7 +63,9 @@ struct UserService {
     }
     
     static func posts(for user: User, completion: @escaping ([Post]) -> Void) {
-        let ref = Database.database().reference().child("posts").child(user.uid)
+        //let ref = Database.database().reference().child("posts").child(user.uid)
+        let ref = DatabaseReference.toLocation(.posts(uid: user.uid))
+        
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
                 return completion([])
@@ -95,8 +100,8 @@ struct UserService {
     static func usersExcludingCurrentUser(completion: @escaping ([User]) -> Void) {
         let currentUser = User.current
         // 1
-        let ref = Database.database().reference().child("users")
-        
+        //let ref = Database.database().reference().child("users")
+        let ref = DatabaseReference.toLocation(.users)
         // 2
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
@@ -128,7 +133,8 @@ struct UserService {
     }
     
     static func show(forUID uid: String, completion: @escaping (User?) -> Void){
-        let ref = Database.database().reference().child("user").child(uid)
+        //let ref = Database.database().reference().child("user").child(uid)
+        let ref = DatabaseReference.toLocation(.showUser(uid: uid))
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
             guard let user = User(snapshot: snapshot) else {
                 return completion(nil)
@@ -142,7 +148,9 @@ struct UserService {
         
         let userAttrs = ["username" : username]
         
-        let ref = Database.database().reference().child("users").child(firUser.uid)
+        //let ref = Database.database().reference().child("users").child(firUser.uid)
+        
+        let ref = DatabaseReference.toLocation(.users).child(firUser.uid)
         ref.setValue(userAttrs) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)

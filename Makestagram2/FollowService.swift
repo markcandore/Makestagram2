@@ -89,7 +89,8 @@ struct FollowService{
     
     static func isUserFollowed(_ user: User, byCurrentUserWithCompletion completion : @escaping (Bool) -> Void){
         let currentUID = User.current.uid
-        let ref = Database.database().reference().child("followers").child(user.uid)
+        //let ref = Database.database().reference().child("followers").child(user.uid)
+        let ref = DatabaseReference.toLocation(.followers(uid: user.uid))
         
         ref.queryEqual(toValue: nil, childKey: currentUID).observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? [String: Bool]{
