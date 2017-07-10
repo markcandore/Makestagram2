@@ -10,6 +10,8 @@ import UIKit
 import FirebaseAuth
 import FirebaseAuthUI
 import FirebaseDatabase
+import FirebaseFacebookAuthUI
+import FirebaseGoogleAuthUI
 
 typealias FIRUser = FirebaseAuth.User
 
@@ -23,6 +25,10 @@ class LoginViewController: UIViewController{
             else{ return }
         
         authUI.delegate = self
+        
+        // configure Auth UI for Facebook and Google login
+        let providers: [FUIAuthProvider] = [FUIFacebookAuth(), FUIGoogleAuth()]
+        authUI.providers = providers
         
         let authViewController = authUI.authViewController()
         present(authViewController, animated: true)
