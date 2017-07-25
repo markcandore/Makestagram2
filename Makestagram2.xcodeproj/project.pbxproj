@@ -28,19 +28,19 @@
 		5F0481611F0AC90C00E8B3E4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04815F1F0AC90C00E8B3E4 /* User.swift */; };
 		5F0481631F0AC91900E8B3E4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F0481621F0AC91900E8B3E4 /* Login.storyboard */; };
 		5F0481651F0AC92700E8B3E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0481641F0AC92700E8B3E4 /* Constants.swift */; };
-		5F0481671F0AE4AC00E8B3E4 /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0481661F0AE4AC00E8B3E4 /* LikeService.swift */; };
-		5F0481691F0AEF7600E8B3E4 /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0481681F0AEF7600E8B3E4 /* FollowService.swift */; };
 		5F04816B1F0AF60B00E8B3E4 /* FindFriends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F04816A1F0AF60B00E8B3E4 /* FindFriends.storyboard */; };
-		5F04816D1F0AF72600E8B3E4 /* FindFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04816C1F0AF72600E8B3E4 /* FindFriendsCell.swift */; };
-		5F04816F1F0D6B1E00E8B3E4 /* DatabaseReference+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04816E1F0D6B1E00E8B3E4 /* DatabaseReference+Location.swift */; };
-		5F0481711F0EE51300E8B3E4 /* UITableView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0481701F0EE51300E8B3E4 /* UITableView+Utility.swift */; };
-		5F0481731F0EE90500E8B3E4 /* MGPaginationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0481721F0EE90500E8B3E4 /* MGPaginationHelper.swift */; };
 		5F32AC1D1F056BEC001D7B8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32AC1C1F056BEC001D7B8A /* AppDelegate.swift */; };
 		5F32AC241F056BEC001D7B8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F32AC231F056BEC001D7B8A /* Assets.xcassets */; };
 		5F32AC331F056EAA001D7B8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32AC321F056EAA001D7B8A /* ViewController.swift */; };
 		5F32AC361F056EB2001D7B8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F32AC341F056EB2001D7B8A /* LaunchScreen.storyboard */; };
 		5F32AC371F056EB2001D7B8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F32AC351F056EB2001D7B8A /* Main.storyboard */; };
 		5F32AC3B1F056EBB001D7B8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F32AC391F056EBB001D7B8A /* GoogleService-Info.plist */; };
+		5FD86CEA1F1FE39100EA347A /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD86CE81F1FE39100EA347A /* FollowService.swift */; };
+		5FD86CEB1F1FE39100EA347A /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD86CE91F1FE39100EA347A /* LikeService.swift */; };
+		5FD86CED1F1FE3A000EA347A /* MGPaginationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD86CEC1F1FE3A000EA347A /* MGPaginationHelper.swift */; };
+		5FD86CEF1F1FE3AE00EA347A /* FindFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD86CEE1F1FE3AE00EA347A /* FindFriendsCell.swift */; };
+		5FD86CF21F1FE3BE00EA347A /* DatabaseReference+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD86CF01F1FE3BE00EA347A /* DatabaseReference+Location.swift */; };
+		5FD86CF31F1FE3BE00EA347A /* UITableView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD86CF11F1FE3BE00EA347A /* UITableView+Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,13 +67,7 @@
 		5F04815F1F0AC90C00E8B3E4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		5F0481621F0AC91900E8B3E4 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
 		5F0481641F0AC92700E8B3E4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
-		5F0481661F0AE4AC00E8B3E4 /* LikeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
-		5F0481681F0AEF7600E8B3E4 /* FollowService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowService.swift; sourceTree = "<group>"; };
 		5F04816A1F0AF60B00E8B3E4 /* FindFriends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FindFriends.storyboard; path = Storyboards/FindFriends.storyboard; sourceTree = "<group>"; };
-		5F04816C1F0AF72600E8B3E4 /* FindFriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindFriendsCell.swift; sourceTree = "<group>"; };
-		5F04816E1F0D6B1E00E8B3E4 /* DatabaseReference+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DatabaseReference+Location.swift"; sourceTree = "<group>"; };
-		5F0481701F0EE51300E8B3E4 /* UITableView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Utility.swift"; sourceTree = "<group>"; };
-		5F0481721F0EE90500E8B3E4 /* MGPaginationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGPaginationHelper.swift; sourceTree = "<group>"; };
 		5F32AC191F056BEC001D7B8A /* Makestagram2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makestagram2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F32AC1C1F056BEC001D7B8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F32AC231F056BEC001D7B8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +76,12 @@
 		5F32AC351F056EB2001D7B8A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
 		5F32AC381F056EBB001D7B8A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
 		5F32AC391F056EBB001D7B8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5FD86CE81F1FE39100EA347A /* FollowService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FollowService.swift; path = Services/FollowService.swift; sourceTree = "<group>"; };
+		5FD86CE91F1FE39100EA347A /* LikeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeService.swift; path = Services/LikeService.swift; sourceTree = "<group>"; };
+		5FD86CEC1F1FE3A000EA347A /* MGPaginationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MGPaginationHelper.swift; path = Helpers/MGPaginationHelper.swift; sourceTree = "<group>"; };
+		5FD86CEE1F1FE3AE00EA347A /* FindFriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindFriendsCell.swift; path = Views/FindFriendsCell.swift; sourceTree = "<group>"; };
+		5FD86CF01F1FE3BE00EA347A /* DatabaseReference+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DatabaseReference+Location.swift"; path = "Extensions/DatabaseReference+Location.swift"; sourceTree = "<group>"; };
+		5FD86CF11F1FE3BE00EA347A /* UITableView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Utility.swift"; path = "Extensions/UITableView+Utility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +116,11 @@
 		5F0480FD1F06A50400E8B3E4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5FD86CF01F1FE3BE00EA347A /* DatabaseReference+Location.swift */,
+				5FD86CF11F1FE3BE00EA347A /* UITableView+Utility.swift */,
 				5F0481521F0AC8E800E8B3E4 /* StorageReference+Post.swift */,
 				5F0481531F0AC8E800E8B3E4 /* UIImage+Size.swift */,
 				5F0481541F0AC8E800E8B3E4 /* Storyboard+Utility.swift */,
-				5F04816E1F0D6B1E00E8B3E4 /* DatabaseReference+Location.swift */,
-				5F0481701F0EE51300E8B3E4 /* UITableView+Utility.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				5F04812D1F06CEA600E8B3E4 /* MGPhotoHelper.swift */,
-				5F0481721F0EE90500E8B3E4 /* MGPaginationHelper.swift */,
+				5FD86CEC1F1FE3A000EA347A /* MGPaginationHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 				5F0481421F0AC88800E8B3E4 /* PostActionCell.swift */,
 				5F0481431F0AC88800E8B3E4 /* PostHeaderCell.swift */,
 				5F0481441F0AC88900E8B3E4 /* PostImageCell.swift */,
-				5F04816C1F0AF72600E8B3E4 /* FindFriendsCell.swift */,
+				5FD86CEE1F1FE3AE00EA347A /* FindFriendsCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -230,8 +230,8 @@
 				5F0481581F0AC8F900E8B3E4 /* UserService.swift */,
 				5F0481591F0AC8F900E8B3E4 /* PostService.swift */,
 				5F04815A1F0AC8F900E8B3E4 /* StorageService.swift */,
-				5F0481661F0AE4AC00E8B3E4 /* LikeService.swift */,
-				5F0481681F0AEF7600E8B3E4 /* FollowService.swift */,
+				5FD86CE81F1FE39100EA347A /* FollowService.swift */,
+				5FD86CE91F1FE39100EA347A /* LikeService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -364,32 +364,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F0481691F0AEF7600E8B3E4 /* FollowService.swift in Sources */,
 				5F0481471F0AC88900E8B3E4 /* PostImageCell.swift in Sources */,
+				5FD86CEB1F1FE39100EA347A /* LikeService.swift in Sources */,
 				5F04815B1F0AC8F900E8B3E4 /* UserService.swift in Sources */,
 				5F04814E1F0AC8BF00E8B3E4 /* HomeViewController.swift in Sources */,
 				5F04812E1F06CEA600E8B3E4 /* MGPhotoHelper.swift in Sources */,
 				5F04815D1F0AC8F900E8B3E4 /* StorageService.swift in Sources */,
-				5F04816F1F0D6B1E00E8B3E4 /* DatabaseReference+Location.swift in Sources */,
 				5F04814D1F0AC8BF00E8B3E4 /* FindFriendsViewController.swift in Sources */,
+				5FD86CED1F1FE3A000EA347A /* MGPaginationHelper.swift in Sources */,
 				5F0481511F0AC8BF00E8B3E4 /* LoginViewController.swift in Sources */,
 				5F0481551F0AC8E800E8B3E4 /* StorageReference+Post.swift in Sources */,
 				5F0481611F0AC90C00E8B3E4 /* User.swift in Sources */,
-				5F04816D1F0AF72600E8B3E4 /* FindFriendsCell.swift in Sources */,
 				5F04814F1F0AC8BF00E8B3E4 /* CreateUsernameViewController.swift in Sources */,
 				5F32AC331F056EAA001D7B8A /* ViewController.swift in Sources */,
 				5F0481651F0AC92700E8B3E4 /* Constants.swift in Sources */,
 				5F0481461F0AC88900E8B3E4 /* PostHeaderCell.swift in Sources */,
-				5F0481711F0EE51300E8B3E4 /* UITableView+Utility.swift in Sources */,
 				5F0481501F0AC8BF00E8B3E4 /* MainTabBarController.swift in Sources */,
 				5F0481561F0AC8E800E8B3E4 /* UIImage+Size.swift in Sources */,
 				5F04815C1F0AC8F900E8B3E4 /* PostService.swift in Sources */,
-				5F0481671F0AE4AC00E8B3E4 /* LikeService.swift in Sources */,
+				5FD86CF31F1FE3BE00EA347A /* UITableView+Utility.swift in Sources */,
+				5FD86CEA1F1FE39100EA347A /* FollowService.swift in Sources */,
+				5FD86CF21F1FE3BE00EA347A /* DatabaseReference+Location.swift in Sources */,
+				5FD86CEF1F1FE3AE00EA347A /* FindFriendsCell.swift in Sources */,
 				5F0481451F0AC88900E8B3E4 /* PostActionCell.swift in Sources */,
 				5F0481601F0AC90C00E8B3E4 /* Post.swift in Sources */,
 				5F32AC1D1F056BEC001D7B8A /* AppDelegate.swift in Sources */,
 				5F0481571F0AC8E800E8B3E4 /* Storyboard+Utility.swift in Sources */,
-				5F0481731F0EE90500E8B3E4 /* MGPaginationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
